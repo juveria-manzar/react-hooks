@@ -34,6 +34,9 @@ let App = () => {
   //cleanup function-case 1
   // in this case you only give a function and no arr
   // useEffect will execute your function after every render, that is after first render and every re-render
+  // after first render clean up funct stored in execution context
+  // when the state would be changed the component would be rerendered(if use effect type case2) 
+  // before being rerendered the cleanup function would be called. 
   // useEffect(() => {
   //   console.log("use effect was called on every render");
 
