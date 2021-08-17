@@ -25,10 +25,19 @@ let App = () => {
   // case 3:
   // this useEffect will execute after first render 
   // and also after the state variable which is being used changes 
+  // useEffect(() => {
+  //   let arr = process.split('i');
+  //   console.log(arr);
+  // }, [process])
+
+  //cleanup function
   useEffect(() => {
-    let arr = process.split('i');
-    console.log(arr);
-  }, [process])
+    console.log("use effect was called on every render");
+
+    return () => {
+      console.log("clean up function");
+    }
+  })
 
 
   return (
